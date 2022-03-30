@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/1.4.1.RELEASE/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bloques-entity-clazz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bloques-entity-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bloques-entity-jpa-support/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bloques-entity-springboot-startar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

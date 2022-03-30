@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="entity-jpa-support" />
+        <module name="entity-clazz" />
+        <module name="entity-springboot-startar" />
+        <module name="entity-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blocque-entity-clazz" target="8" />
+      <module name="bloques-entity-jpa-suuport" target="1.8" />
+      <module name="bolck-entity-clazz" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="entity-clazz" options="-parameters" />
+      <module name="entity-core" options="-parameters" />
+      <module name="entity-jpa-support" options="-parameters" />
+      <module name="entity-springboot-startar" options="-parameters" />
+    </option>
+  </component>
+</project>
