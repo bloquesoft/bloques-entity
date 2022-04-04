@@ -9,8 +9,8 @@
 
 package testData.usercenter;
 
+import io.github.bloquesoft.entity.clazz.annotation.*;
 import lombok.Data;
-import org.bloques.entity.clazz.annotation.*;
 
 import java.util.List;
 

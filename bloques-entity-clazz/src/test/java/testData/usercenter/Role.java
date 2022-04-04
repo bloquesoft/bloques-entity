@@ -9,9 +9,9 @@
 
 package testData.usercenter;
 
-import org.bloques.entity.clazz.annotation.BEntity;
-import org.bloques.entity.clazz.annotation.ListField;
-import org.bloques.entity.clazz.annotation.PrimaryKey;
+import io.github.bloquesoft.entity.clazz.annotation.BEntity;
+import io.github.bloquesoft.entity.clazz.annotation.ListField;
+import io.github.bloquesoft.entity.clazz.annotation.PrimaryKey;
 
 import java.util.List;
 

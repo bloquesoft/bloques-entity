@@ -9,8 +9,8 @@
 
 package testData;
 
-import org.bloques.entity.clazz.annotation.BEntity;
-import org.bloques.entity.clazz.annotation.PrimaryKey;
+import io.github.bloquesoft.entity.clazz.annotation.BEntity;
+import io.github.bloquesoft.entity.clazz.annotation.PrimaryKey;
 
 @BEntity(packageName = "UserCenter")
 public class User

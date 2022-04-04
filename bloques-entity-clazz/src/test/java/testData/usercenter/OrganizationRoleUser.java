@@ -10,9 +10,9 @@
 package testData.usercenter;
 
 
-import org.bloques.entity.clazz.annotation.EntityField;
-import org.bloques.entity.clazz.annotation.BEntity;
-import org.bloques.entity.clazz.annotation.PrimaryKey;
+import io.github.bloquesoft.entity.clazz.annotation.EntityField;
+import io.github.bloquesoft.entity.clazz.annotation.BEntity;
+import io.github.bloquesoft.entity.clazz.annotation.PrimaryKey;
 
 @BEntity(title = "组织角色用户", packageName = "testData/usercenter")
 public class OrganizationRoleUser
