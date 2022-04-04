@@ -16,15 +16,15 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ListResponse extends BaseApiResponse {
+public class ListResponse<T> extends BaseApiResponse {
 
-    private List<Object> list;
+    private List<T> list;
 
-    public ListResponse(){
+    public ListResponse() {
         super();
     }
 
-    public ListResponse(List<Object> list){
+    public ListResponse(List<T> list) {
         this.list = list;
     }
 }

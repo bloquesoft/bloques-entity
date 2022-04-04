@@ -3,11 +3,11 @@
  * Project:bloques-entity-springboot-startar
  * FileName:User.java
  * Author:zhangjian
- * date:2022/3/29 下午11:51
+ * date:2022/4/4 下午9:59
  * Version:0.0.1
  */
 
-package testData;
+package testData.entity;
 
 import io.github.bloquesoft.entity.clazz.annotation.BEntity;
 import io.github.bloquesoft.entity.clazz.annotation.PrimaryKey;

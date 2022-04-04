@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping(value = "/ebase/api/")
-public class ApiController {
+@RequestMapping(value = "/bloques/entity/execute/api/")
+public class ExecuteApiController {
 
     @Autowired
     private EntityExecutor entityExecutor;
@@ -44,13 +43,13 @@ public class ApiController {
     }
 
     @RequestMapping(value = "{packageName}/{entityName}/list", method = RequestMethod.POST)
-    public ListResponse findList(
+    public ListResponse<Object> findList(
             @PathVariable(value = "packageName") String packageName,
             @PathVariable(value = "entityName") String entityName,
             @RequestBody() FindListRequest request
     ) {
         List<Object> list = entityExecutor.findList(packageName, entityName, request.getMatch(), request.getGraph());
-        return new ListResponse(list);
+        return new ListResponse<Object>(list);
     }
 
     @RequestMapping(value = "{packageName}/{entityName}/update", method = RequestMethod.POST)

@@ -13,6 +13,7 @@ import io.github.bloquesoft.entity.core.definition.EntityDefinition;
 import io.github.bloquesoft.entity.core.definition.PackageDefinition;
 import org.springframework.util.Assert;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -40,6 +41,19 @@ public class EntityDefinitionRegisterImpl implements EntityDefinitionRegister {
     @Override
     public boolean contain(String id) {
         return entityContainer.containsKey(id);
+    }
+
+    @Override
+    public Collection<PackageDefinition> getAllPackages() {
+        return this.packageContainer.values();
+    }
+
+    @Override
+    public Collection<EntityDefinition> getEntities(String packageName) {
+        Assert.hasLength(packageName);
+        Assert.isTrue(packageContainer.containsKey(packageName), "Not such packageName:" + packageName);
+        PackageDefinition pack = packageContainer.get(packageName);
+        return pack.getAllEntities();
     }
 
     @Override

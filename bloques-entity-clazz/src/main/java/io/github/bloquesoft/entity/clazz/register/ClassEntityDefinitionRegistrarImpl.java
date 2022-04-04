@@ -16,6 +16,7 @@ import io.github.bloquesoft.entity.core.definition.EntityDefinition;
 import io.github.bloquesoft.entity.core.definition.PackageDefinition;
 import io.github.bloquesoft.entity.core.register.EntityDefinitionRegister;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -97,5 +98,15 @@ public class ClassEntityDefinitionRegistrarImpl implements ClassEntityDefinition
     @Override
     public boolean contain(String entityDefinitionId) {
         return this.entityDefinitionRegistrar.contain(entityDefinitionId);
+    }
+
+    @Override
+    public Collection<PackageDefinition> getAllPackages() {
+        return this.entityDefinitionRegistrar.getAllPackages();
+    }
+
+    @Override
+    public Collection<EntityDefinition> getEntities(String packageName) {
+        return this.entityDefinitionRegistrar.getEntities(packageName);
     }
 }

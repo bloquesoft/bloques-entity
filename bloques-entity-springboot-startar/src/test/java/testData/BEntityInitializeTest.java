@@ -3,11 +3,11 @@
  * Project:bloques-entity-springboot-startar
  * FileName:BEntityInitializeTest.java
  * Author:zhangjian
- * date:2022/4/2 下午9:08
+ * date:2022/4/4 下午9:57
  * Version:0.0.1
  */
 
-package io.github.bloquesoft.entity.springboot;
+package testData;
 
 import junit.framework.TestCase;
 import io.github.bloquesoft.entity.clazz.executor.ClassEntityExecutor;

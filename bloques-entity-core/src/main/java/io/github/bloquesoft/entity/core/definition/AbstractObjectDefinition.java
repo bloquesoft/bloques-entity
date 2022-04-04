@@ -9,6 +9,7 @@
 
 package io.github.bloquesoft.entity.core.definition;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,7 @@ public abstract class AbstractObjectDefinition
 
     @Getter
     @Setter
+    @JsonIgnore
     private PackageDefinition packageDefinition;
 
     @Getter

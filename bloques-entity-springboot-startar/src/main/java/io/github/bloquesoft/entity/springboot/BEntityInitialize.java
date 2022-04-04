@@ -22,10 +22,11 @@ import io.github.bloquesoft.entity.core.object.EntityObjectFactory;
 import io.github.bloquesoft.entity.core.object.MapEntityObjectFactory;
 import io.github.bloquesoft.entity.core.register.EntityDefinitionRegister;
 import io.github.bloquesoft.entity.core.register.EntityDefinitionRegisterImpl;
-import lombok.extern.slf4j.Slf4j;
 import io.github.bloquesoft.entity.springboot.annotation.EnableBEntity;
-import io.github.bloquesoft.entity.springboot.api.ApiController;
 import io.github.bloquesoft.entity.springboot.api.ControllerExceptionAdvice;
+import io.github.bloquesoft.entity.springboot.api.DefinitionApiController;
+import io.github.bloquesoft.entity.springboot.api.ExecuteApiController;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
@@ -61,12 +62,18 @@ public class BEntityInitialize implements ImportBeanDefinitionRegistrar {
     }
 
     private void enableApi(Map<String, Object> settingMap, BeanDefinitionRegistry registr) {
-        if (settingMap.containsKey("enableApi")) {
-            if ((Boolean) settingMap.get("enableApi")) {
-                register(registr, ApiController.class, ApiController.class.getSimpleName(), null, null);
-                register(registr, ControllerExceptionAdvice.class, ControllerExceptionAdvice.class.getSimpleName(), null, null);
+        if (settingMap.containsKey("enableExecuteApi")) {
+            if ((Boolean) settingMap.get("enableExecuteApi")) {
+                register(registr, ExecuteApiController.class, ExecuteApiController.class.getSimpleName(), null, null);
             }
         }
+        if (settingMap.containsKey("enableDefinitionApi"))
+        {
+            if ((Boolean) settingMap.get("enableDefinitionApi")) {
+                register(registr, DefinitionApiController.class, DefinitionApiController.class.getSimpleName(), null, null);
+            }
+        }
+        register(registr, ControllerExceptionAdvice.class, ControllerExceptionAdvice.class.getSimpleName(), null, null);
     }
 
     private void registerBean(BeanDefinitionRegistry registry) {

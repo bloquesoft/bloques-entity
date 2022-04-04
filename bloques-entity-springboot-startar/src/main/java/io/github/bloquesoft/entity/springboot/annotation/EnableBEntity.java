@@ -21,5 +21,6 @@ import java.lang.annotation.*;
 @Import({BEntityInitialize.class})
 public @interface EnableBEntity {
     String[] classEntityDefinitionPackages() default {};
-    boolean enableApi() default false;
+    boolean enableExecuteApi() default false;
+    boolean enableDefinitionApi() default false;
 }

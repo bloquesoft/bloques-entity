@@ -9,6 +9,7 @@
 
 package io.github.bloquesoft.entity.core.definition;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
 import org.springframework.util.Assert;
@@ -21,6 +22,7 @@ public class PackageDefinition
     private final String name;
 
     @Getter
+    @JsonIgnore
     private final Set<EntityDefinition> entities;
 
     private final Map<String, EntityDefinition> entitiesMap;
@@ -36,9 +38,13 @@ public class PackageDefinition
         return entitiesMap.get(entityName);
     }
 
+    @JsonIgnore
+    public Collection<EntityDefinition> getAllEntities(){
+        return entitiesMap.values();
+    }
+
     public PackageDefinition(String name)
     {
-        //this.id = Preconditions.checkNotNull(id);
         this.name = Preconditions.checkNotNull(name);
         this.entities = new HashSet<>();
         this.entitiesMap = new HashMap<>();

@@ -10,10 +10,17 @@
 package io.github.bloquesoft.entity.core.register;
 
 import io.github.bloquesoft.entity.core.definition.EntityDefinition;
+import io.github.bloquesoft.entity.core.definition.PackageDefinition;
+
+import java.util.Collection;
 
 public interface EntityDefinitionRegister extends EntityDefinitionFactory
 {
     void register(EntityDefinition ed);
 
     boolean contain(String id);
+
+    Collection<PackageDefinition> getAllPackages();
+
+    Collection<EntityDefinition> getEntities(String packageName);
 }

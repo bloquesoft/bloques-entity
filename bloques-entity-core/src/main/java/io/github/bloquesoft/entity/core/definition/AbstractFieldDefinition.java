@@ -9,6 +9,7 @@
 
 package io.github.bloquesoft.entity.core.definition;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
 import lombok.Setter;
@@ -41,6 +42,7 @@ public abstract class AbstractFieldDefinition
 
     @Getter
     @Setter
+    @JsonIgnore
     private EntityDefinition entityDefinition;
 
     public AbstractFieldDefinition(String id, String name, FieldType type) {
